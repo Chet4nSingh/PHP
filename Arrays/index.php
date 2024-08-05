@@ -39,7 +39,7 @@
         echo "</pre>";
 
         // KEY => VALUE
-        $programmingLanguages = [
+        /* $programmingLanguages = [
             'PHP' => 8.0,
             'Java' => 21,
         ];
@@ -47,6 +47,12 @@
         echo "<pre>";
         print_r($programmingLanguages);
         echo "<br>".$programmingLanguages['PHP'];
+        echo "</pre>"; */
+
+        // Keys can only be Strings or Integers
+        $array = [true => "Changes to 1", 1 => "Changes to String 1", '1' => "Already String 1", null => "null Changes to Empty String"];
+        echo "<pre>";
+        print_r($array);
         echo "</pre>";
     ?>
 </body>
