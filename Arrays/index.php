@@ -37,6 +37,17 @@
         echo "<pre>";
         print_r($programmingLanguages);
         echo "</pre>";
+
+        // KEY => VALUE
+        $programmingLanguages = [
+            'PHP' => 8.0,
+            'Java' => 21,
+        ];
+
+        echo "<pre>";
+        print_r($programmingLanguages);
+        echo "<br>".$programmingLanguages['PHP'];
+        echo "</pre>";
     ?>
 </body>
 </html>
