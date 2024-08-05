@@ -26,12 +26,29 @@
         $greet_var = greet();
         echo $greet_var;
 
-        // Telling PHP that the expected return type of this function is int
+        // Telling PHP that the expected return type of this function is integer
         function returnInt(): int {
             return 1;
         }
 
         echo "<br>".returnInt();
+
+        // Telling PHP that this function can return either null or an integer
+        function returnNullOrInt(): ?int {
+            return null;
+        }
+
+        echo "<br>".returnNullOrInt();
+
+        // Telling PHP that this function can return integer, float or array
+
+        function returnAnyOfThree(): int | float | array {
+            // return 1; // OR
+            // return 1.5; // OR
+            return [1,2,3];
+        }
+
+        print_r(returnAnyOfThree());
     ?>
 </body>
 </html>
