@@ -19,7 +19,19 @@
 </head>
 <body>
     <?php
-        echo"Functions";
+        function greet() {
+            return "Hello, Functions!";
+        }
+
+        $greet_var = greet();
+        echo $greet_var;
+
+        // Telling PHP that the expected return type of this function is int
+        function returnInt(): int {
+            return 1;
+        }
+
+        echo "<br>".returnInt();
     ?>
 </body>
 </html>
