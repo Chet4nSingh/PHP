@@ -41,7 +41,6 @@
         echo "<br>".returnNullOrInt();
 
         // Telling PHP that this function can return integer, float or array
-
         function returnAnyOfThree(): int | float | array {
             // return 1; // OR
             // return 1.5; // OR
@@ -51,7 +50,6 @@
         print_r(returnAnyOfThree());
 
         // Parameterized functions
-
         function foo($x, $y) {
             return $x + $y;
         }
