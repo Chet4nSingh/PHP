@@ -49,6 +49,14 @@
         }
 
         print_r(returnAnyOfThree());
+
+        // Parameterized functions
+
+        function foo($x, $y) {
+            return $x + $y;
+        }
+
+        echo "<br>".foo(5, 10);
     ?>
 </body>
 </html>
