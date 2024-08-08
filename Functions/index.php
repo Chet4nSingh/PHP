@@ -66,7 +66,9 @@
             return array_sum($numbers);
         }
 
-        echo "<br>".sum(5, 10);
+        $numbers = [5, 10, 30, 45];
+
+        echo "<br>".sum(...$numbers);
 
 
 
