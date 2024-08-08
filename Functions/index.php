@@ -50,11 +50,20 @@
         print_r(returnAnyOfThree());
 
         // Parameterized functions
-        function foo($x, $y) {
+        /* function foo($x, $y) {
             return $x + $y;
         }
 
-        echo "<br>".foo(5, 10);
+        echo "<br>".foo(5, 10); */
+
+        function foo(int | float $x, int $y = 10) {
+            return $x + $y;
+        }
+
+        echo "<br>".foo(5.0, 10);
+
+
+
     ?>
 </body>
 </html>
