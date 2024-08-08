@@ -70,6 +70,15 @@
 
         echo "<br>".sum(...$numbers);
 
+        function divide($x, $y) {
+            return $x / $y;
+        }
+
+        $x = 6;
+        $y = 3;
+
+        echo"<br>". divide(y: $y, x: $x);
+
 
 
     ?>
