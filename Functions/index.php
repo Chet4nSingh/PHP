@@ -62,6 +62,12 @@
 
         echo "<br>".foo(5.0, 10);
 
+        function sum(...$numbers) {
+            return array_sum($numbers);
+        }
+
+        echo "<br>".sum(5, 10);
+
 
 
     ?>
