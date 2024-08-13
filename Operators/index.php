@@ -49,6 +49,21 @@
         echo '<br>';
         var_dump($x % $y); // 1
         // here the sign is taken from the no. that we are dividing (-11) which is -ve, so the answer is -ve
+
+        $x = 11;
+        $y = 2;
+        echo '<br>';
+        var_dump($x <=> $y); 
+        // 1, x > y
+        // 0, x === y
+        // -1, x < y
+
+        $x = null;
+        $y = $x ?? 'Hello'; // nullish coalescing operator
+        // $y will only be equal to the value after ?? if $x is null
+        echo '<br>';
+        var_dump($y);
+
     ?>
 </body>
 </html>
