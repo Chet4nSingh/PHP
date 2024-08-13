@@ -31,6 +31,24 @@
         echo '<br>';
         var_dump($x / $y);
 
+        echo '<br>';
+        var_dump(fdiv($x, 0)); // to avoid getting an error because of division by zero we use fdiv();
+        
+        echo '<br>';
+        var_dump(fmod(4.5, 1.2)); // without fmod 4.5 % 1.2 will return 0 which is not the right value
+        // fmod() is used to perform modulus operation between two float values
+
+        $x = 11;
+        $y = -2;
+        echo '<br>';
+        var_dump($x % $y); // 1
+        // here the sign is taken from the no. that we are dividing (11) which is +ve, so the answer is +ve
+
+        $x = -11;
+        $y = 2;
+        echo '<br>';
+        var_dump($x % $y); // 1
+        // here the sign is taken from the no. that we are dividing (-11) which is -ve, so the answer is -ve
     ?>
 </body>
 </html>
