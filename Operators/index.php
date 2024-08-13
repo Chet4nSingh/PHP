@@ -63,6 +63,15 @@
         // $y will only be equal to the value after ?? if $x is null
         echo '<br>';
         var_dump($y);
+        
+        $y = $x ?? 'Hello'; // here $x is not defined but instead of throwing an error $y is simply evaluated to 'Hello'
+        echo '<br>';
+        var_dump($y);
+
+        $x = @file('file.txt'); // @ - error suppressing operator 
+        // it just silences your application, doesn't fix any issues and we wouldn't even know if we had any issues in the first place
+
+        
 
     ?>
 </body>
