@@ -20,12 +20,12 @@
 <body>
     <?php
         $x = '10';
-        var_dump(+$x); // We can change a value from string to integer by putting a plus or minus infront of it
+        var_dump(+$x); //* We can change a value from string to integer by putting a plus or minus infront of it
         
         $x = 10;
         $y = 2;
         echo '<br>';
-        var_dump($x / $y); // value after division will always be float except when the answer is a whole number
+        var_dump($x / $y); //* value after division will always be float except when the answer is a whole number
         
         $y = 3;
         echo '<br>';
