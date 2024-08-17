@@ -42,7 +42,23 @@
         echo "</pre>";
 
         //* do-while
+        echo "<pre>";
+        echo "<h3>do {} while()</h3>";
+        $i = 0;
+        do {
+            echo "$i ";
+            $i ++;
+        } while ($i < 10);
+        echo "</pre>";
+
         //* for
+        echo "<pre>";
+        echo "<h3>for() {}</h3>";
+        for ($i = 0; $i < 10; $i ++) {
+            echo "$i ";
+        }
+        echo "</pre>";
+
         //* for-each
     ?>    
 </body>
