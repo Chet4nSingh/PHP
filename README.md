@@ -7,5 +7,6 @@ This repository is created to keep the PHP tutorial source code and other relate
 - Variables
 - Operators
 - Super Globals
+- Conditional Statements
 - Arrays
 - Functions
