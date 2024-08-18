@@ -60,6 +60,14 @@
         echo "</pre>";
 
         //* for-each
+        echo "<pre>";
+        echo "<h3>foreach() {}</h3>";
+        $languages = ['C++', 'Java', 'JavaScript', 'PHP'];
+        echo "| ";
+        foreach ($languages as $language) {
+            echo "$language | ";
+        }
+        echo "</pre>";
     ?>    
 </body>
 </html>
