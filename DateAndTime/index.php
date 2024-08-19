@@ -24,7 +24,22 @@
 </head>
 <body>
     <?php
+        $currentTime = time();
+        echo $currentTime; //* Today
+        echo "<br>";
+        echo $currentTime + 5 * 24 * 60 * 60; //* 5 days later
+        echo "<br>";
+        echo $currentTime - 24 * 60 * 60; //* Yesterday
+        echo "<br>";
         
+        echo date('d/m/Y g:ia')."<br>";
+        echo date('d/m/Y g:ia', $currentTime + 5 * 24 * 60 * 60)."<br>";
+        echo date('d/m/Y g:ia', $currentTime - 24 * 60 * 60)."<br>";
+        
+        date_default_timezone_set('UTC');
+        echo date('d/m/Y g:ia')."<br>";
+        echo date('d/m/Y g:ia', $currentTime + 5 * 24 * 60 * 60)."<br>";
+        echo date('d/m/Y g:ia', $currentTime - 24 * 60 * 60)."<br>";
     ?>    
 </body>
 </html>
