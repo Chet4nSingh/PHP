@@ -63,11 +63,30 @@
         echo "<pre>";
         echo "<h3>foreach() {}</h3>";
         $languages = ['C++', 'Java', 'JavaScript', 'PHP'];
-        echo "| ";
+
+        //! EXAMPLE ONE
+        /* echo "| ";
         foreach ($languages as $language) {
             echo "$language | ";
         }
-        echo "</pre>";
+        echo "<br>";
+
+        ! EXAMPLE TWO
+        echo "| ";
+        foreach ($languages as $key => $language) {
+            echo "$key: $language | ";
+        }
+        echo "</pre>"; */
+
+        //! EXAMPLE THREE
+        //* making $language a reference value
+        echo "| ";
+        foreach ($languages as &$language) {
+            $language = "C#"; //* all the elements of the array will change permanently here
+            echo "$language | ";
+        }
+
+        echo "<br>";        
     ?>    
 </body>
 </html>
