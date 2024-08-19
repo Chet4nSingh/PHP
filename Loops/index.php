@@ -13,9 +13,14 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             place-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             font-size: 2rem;
+        }
+
+        pre {
+            padding: 4rem;
+            border: 1px dashed green;
         }
     </style>
 </head>
