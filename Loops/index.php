@@ -80,13 +80,35 @@
 
         //! EXAMPLE THREE
         //* making $language a reference value
-        echo "| ";
+        /* echo "| ";
         foreach ($languages as &$language) {
             $language = "C#"; //* all the elements of the array will change permanently here
             echo "$language | ";
         }
 
-        echo "<br>";        
+        echo "<br>";  */ 
+        
+        //! EXAMPLE FOUR
+        $languages = ['C++', 'Java', 'JavaScript', 'PHP'];
+        foreach ($languages as $language) {
+            echo "$language ";
+        }
+        echo "<br>";
+
+        echo "$language<br>"; //* this variable does not get destroyed after the loop ends 
+
+        //! EXAMPLE FIVE
+        foreach ($languages as &$language) {
+            echo "$language ";
+        }
+        echo "<br>";
+
+        $language = "rust"; //* because this variable is still pointing to the last element of the array
+        //* it modifies that element in the original array
+        print_r($languages);
+        
+        echo "</pre>"; 
+
     ?>    
 </body>
 </html>
