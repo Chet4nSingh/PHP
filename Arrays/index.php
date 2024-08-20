@@ -10,18 +10,23 @@
             background-color: #000;
             color: green;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            /* grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr; */
             place-items: center;
             height: 100vh;
             margin: 0;
             font-size: 2rem;
         }
+
+        pre {
+            border: 1px dashed green;
+            padding: 4rem;
+        }
     </style>
 </head>
 <body>
     <?php 
-        $programmingLanguages = ["Java", "Python", "C ++"];
+        /* $programmingLanguages = ["Java", "Python", "C ++"];
         echo "<pre>";
         print_r($programmingLanguages);
         echo "</pre>";
@@ -36,7 +41,7 @@
         array_push($programmingLanguages, "C", "Go");
         echo "<pre>";
         print_r($programmingLanguages);
-        echo "</pre>";
+        echo "</pre>"; */
 
         // KEY => VALUE
         /* $programmingLanguages = [
@@ -50,9 +55,15 @@
         echo "</pre>"; */
 
         // Keys can only be Strings or Integers
-        $array = [true => "Changes to 1", 1 => "Changes to String 1", '1' => "Already String 1", null => "null Changes to Empty String"];
+        /*$array = [true => "Changes to 1", 1 => "Changes to String 1", '1' => "Already String 1", null => "null Changes to Empty String"];
         echo "<pre>";
         print_r($array);
+        echo "</pre>"; */
+
+        echo "<pre>";
+        $array1 = ['a', 'b', 'c'];
+        $array2 = ['1','2','3'];
+        print_r(array_combine($array1, $array2));
         echo "</pre>";
     ?>
 </body>
