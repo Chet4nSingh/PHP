@@ -10,8 +10,8 @@
             background-color: #000;
             color: green;
             display: grid;
-            /* grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr; */
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             place-items: center;
             height: 100vh;
             margin: 0;
@@ -64,6 +64,11 @@
         $array1 = ['a', 'b', 'c'];
         $array2 = ['1','2','3'];
         print_r(array_combine($array1, $array2));
+        echo "</pre>";
+
+        echo "<pre>";
+        $array = [1, 2, 3, 4, 5, 6 , 7, 8];
+        print_r(array_filter($array, function($v) { return $v % 2 === 0; }));
         echo "</pre>";
     ?>
 </body>
