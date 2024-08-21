@@ -6,26 +6,34 @@
     <title>PHP</title>
     <style>
         body {
+            font-family: monospace;
+            background-color: #000;
+            color: green;
             display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             place-items: center;
-            margin: 0;
             height: 100vh;
-            font-family: sans-serif;
-            font-weight: bold;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        h1, h2 {
+            border: 1px dashed green;
+            padding: 4rem;
         }
     </style>
 </head>
 <body>
-    <?php
-        $name = "Dark Matter.";
-        $read = false;
-        
-        if ($read) {
-            $message = "You have read $name";
-        } else {
-            $message = "You have NOT read $name";
-        }
-     ?>
-    <h1><?= $message ?></h1>
+    <h1><?= 'Hello World' ?></h1> //* for printing one liners
+    <h2>
+        <?php
+            echo "Hello World"; //! We will get Parse Error without semicolon      
+            echo "<br>Hello", " ", "World"; 
+            echo "<br>Hello"." "."World";
+            echo "<br>Joe's Invoice"; 
+            echo '<br>Joe\'s Invoice'; 
+        ?>
+    </h2>
 </body>
 </html>
