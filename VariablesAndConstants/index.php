@@ -18,7 +18,7 @@
             font-size: 2rem;
         }
 
-        h1, h2 {
+        h1, p {
             border: 1px dashed green;
             padding: 4rem;
         }
@@ -38,16 +38,17 @@
     <p>
         <?php
             define('STATUS','paid'); //* no need for $ when defining constants            
-            echo STATUS;
-            echo defined('STATUS'); //* returns true or false if a constant has been defined or not
+            echo "<br>".STATUS;
+            echo "<br>".defined('STATUS'); //* returns true or false if a constant has been defined or not
             //* true is printed as 1 on the screen.
 
             const NAME = 'Chetan';
-            echo NAME;
+            echo "<br>".NAME;
             //* Constants created with const are defined at compile time while 
             //* Constants created with define() are defined at run-time
 
             // if (true) {
+            //     define('FOO', 'bar'); //* correct way to define constants in an if block
             //!    const FOO = 'bar';
             // }
 
