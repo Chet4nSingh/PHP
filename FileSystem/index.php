@@ -21,7 +21,10 @@
 </head>
 <body>
     <?php
-        
+        $dir = scandir(__DIR__);
+        print_r($dir);
+        echo "<br>";
+        echo is_file($dir[2])? "true": "false";
     ?>    
 </body>
 </html>
