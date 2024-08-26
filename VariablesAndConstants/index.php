@@ -18,10 +18,22 @@
             font-size: 2rem;
         }
 
-        h1, p {
+        h1, p, form {
             border: 1px dashed green;
             padding: 4rem;
         }
+
+        input {
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid green;
+            color: green;
+            font-family: inherit;
+        }
+
     </style>
 </head>
 <body>
@@ -58,6 +70,13 @@
             //* statements like if.
         ?>
     </p>
+    <form action="form_submit.php" method="POST">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name">                     
+        </div>
+        <button>Submit</button>           
+    </form>
 
 </body>
 </html>
