@@ -55,6 +55,28 @@
         echo $_SERVER['SERVER_NAME'];      // Returns the server name
         echo $_SERVER['REQUEST_METHOD'];   // Returns the request method (GET, POST, etc.)
 
+        // $_SESSION example
+        session_start();
+        $_SESSION['user'] = 'Alice';
+        echo $_SESSION['user'];  // Outputs: Alice
+
+        // $_COOKIE example
+        setcookie("user", "Alice", time() + (86400 * 30), "/");  // Sets a cookie named 'user'
+        echo $_COOKIE['user'];  // Outputs the value of the 'user' cookie
+
+        // $_FILES example
+        echo $_FILES['file']['name'];  // Assuming an uploaded file with the name 'file'
+
+        // $_ENV example
+        echo $_ENV['HOME'];  // Accesses an environment variable named 'HOME'
+
+        // $_GLOBALS example
+        $foo = "bar";
+        function test() {
+            global $foo;
+            echo $foo;  // Outputs: bar
+        }
+        test();
         
     ?>
 
