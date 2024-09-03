@@ -63,6 +63,19 @@
         $timestamp = strtotime($dateString);
         echo date('Y-m-d H:i:s', $timestamp);  // Outputs: 2024-12-25 10:00:00
 
+        // Adding days to a date
+        $futureDate = strtotime('+7 days');
+        echo date('Y-m-d', $futureDate);  // Outputs: 2024-09-09
+
+        // Getting the difference between two dates
+        $date1 = new DateTime('2024-09-01');
+        $date2 = new DateTime('2024-09-10');
+        $interval = $date1->diff($date2);
+        echo $interval->days;  // Outputs: 9
+
+        // Current time in a different timezone
+        $dt = new DateTime('now', new DateTimeZone('America/New_York'));
+        echo $dt->format('Y-m-d H:i:s');  // Outputs: 2024-09-02 08:45:30 (example in New York time)
         
     ?>    
 </body>
