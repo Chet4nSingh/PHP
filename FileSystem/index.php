@@ -47,7 +47,36 @@
         unlink('example.txt');
 
         // Creating a directory
-        mkdir('new_directory');      
+        mkdir('new_directory');
+
+        // Deleting a directory
+        rmdir('new_directory');
+
+        // Reading a directory
+        $files = scandir('path_to_directory');
+        print_r($files);
+
+        // Renaming a file or directory
+        rename('old_name.txt', 'new_name.txt');
+
+        // Copying a file
+        copy('source.txt', 'destination.txt');
+
+        // Getting file information
+        $fileInfo = pathinfo('example.txt');
+        echo $fileInfo['dirname'];
+        echo $fileInfo['basename'];
+        echo $fileInfo['extension'];
+        echo $fileInfo['filename'];
+
+        // Checking if a file is readable/writable
+        if (is_readable('example.txt')) {
+            echo 'File is readable.';
+        }
+
+        if (is_writable('example.txt')) {
+            echo 'File is writable.';
+        }
 
     ?>    
 </body>
