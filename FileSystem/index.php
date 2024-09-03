@@ -78,6 +78,29 @@
             echo 'File is writable.';
         }
 
+        // Opening a file for reading
+        $file = fopen('example.txt', 'r');
+        while ($line = fgets($file)) {
+            echo $line;
+        }
+        fclose($file);
+
+        // Opening a file for writing
+        $file = fopen('example.txt', 'w');
+        fwrite($file, "Writing some text to the file.\n");
+        fclose($file);
+
+        // Reading a file line by line into an array
+        $lines = file('example.txt');
+        print_r($lines);
+
+        // Getting the size of a file
+        $fileSize = filesize('example.txt');
+        echo $fileSize;
+
+        // Moving a file
+        rename('source.txt', 'new_directory/destination.txt');
+
     ?>    
 </body>
 </html>
