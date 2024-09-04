@@ -128,7 +128,35 @@
         $str1 .= $str2;      // Concatenation assignment: $str1 = $str1 . $str2
         echo $str1;          // Outputs: Hello World
 
-        
+        // Array Operators
+        $arr1 = array("a" => "apple", "b" => "banana");
+        $arr2 = array("c" => "cherry", "d" => "date");
+
+        $result = $arr1 + $arr2;  // Union of $arr1 and $arr2
+        print_r($result);         // Outputs: Array ( [a] => apple [b] => banana [c] => cherry [d] => date )
+
+        var_dump($arr1 == $arr2);    // Equality: false (compares key-value pairs)
+        var_dump($arr1 === $arr2);   // Identity: false (compares key-value pairs and order)
+        var_dump($arr1 != $arr2);    // Inequality: true
+        var_dump($arr1 <> $arr2);    // Inequality: true
+        var_dump($arr1 !== $arr2);   // Non-identity: true
+
+        // Type Operators
+        class MyClass {}
+        $object = new MyClass();
+
+        var_dump($object instanceof MyClass);  // Instanceof: true
+
+        // Null Coalescing Operator
+        $i = null;
+        $j = $i ?? "default";  // If $i is null, use "default"
+        echo $j;  // Outputs: default
+
+        // Nullsafe Operator (PHP 8.0+)
+        $object = null;
+        $result = $object?->property;  // Avoids error, returns null if $object is null
+        echo $result;  // Outputs: nothing (null)
+
     ?>
 </body>
 </html>
