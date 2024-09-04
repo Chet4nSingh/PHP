@@ -71,8 +71,38 @@
         $x = @file('file.txt'); // @ - error suppressing operator 
         // it just silences your application, doesn't fix any issues and we wouldn't even know if we had any issues in the first place
 
-        
+        // Arithmetic Operators
+        $a = 10;
+        $b = 5;
 
+        echo $a + $b;  // Addition: 15
+        echo $a - $b;  // Subtraction: 5
+        echo $a * $b;  // Multiplication: 50
+        echo $a / $b;  // Division: 2
+        echo $a % $b;  // Modulus: 0
+        echo $a ** $b; // Exponentiation: 100000
+
+        // Assignment Operators
+        $c = 10;
+        $c += 5;  // Equivalent to $c = $c + 5;
+        $c -= 5;  // Equivalent to $c = $c - 5;
+        $c *= 5;  // Equivalent to $c = $c * 5;
+        $c /= 5;  // Equivalent to $c = $c / 5;
+        $c %= 5;  // Equivalent to $c = $c % 5;
+
+        // Comparison Operators
+        $d = 10;
+        $e = "10";
+
+        var_dump($d == $e);   // Equal: true (value is the same)
+        var_dump($d === $e);  // Identical: false (type is different)
+        var_dump($d != $e);   // Not equal: false (value is the same)
+        var_dump($d !== $e);  // Not identical: true (type is different)
+        var_dump($d > $e);    // Greater than: false
+        var_dump($d < $e);    // Less than: false
+        var_dump($d >= $e);   // Greater than or equal to: true
+        var_dump($d <= $e);   // Less than or equal to: true
+        var_dump($d <=> $e);  // Spaceship: 0 (equal)        
     ?>
 </body>
 </html>
