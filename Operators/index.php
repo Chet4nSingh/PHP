@@ -102,7 +102,33 @@
         var_dump($d < $e);    // Less than: false
         var_dump($d >= $e);   // Greater than or equal to: true
         var_dump($d <= $e);   // Less than or equal to: true
-        var_dump($d <=> $e);  // Spaceship: 0 (equal)        
+        var_dump($d <=> $e);  // Spaceship: 0 (equal)
+
+        // Increment/Decrement Operators
+        $f = 10;
+        echo ++$f;  // Pre-increment: 11
+        echo $f++;  // Post-increment: 11 (then $f becomes 12)
+        echo --$f;  // Pre-decrement: 11
+        echo $f--;  // Post-decrement: 11 (then $f becomes 10)
+
+        // Logical Operators
+        $g = true;
+        $h = false;
+
+        var_dump($g && $h);  // And: false
+        var_dump($g || $h);  // Or: true
+        var_dump(!$g);       // Not: false
+        var_dump($g xor $h); // Xor: true
+
+        // String Operators
+        $str1 = "Hello ";
+        $str2 = "World";
+
+        echo $str1 . $str2;  // Concatenation: Hello World
+        $str1 .= $str2;      // Concatenation assignment: $str1 = $str1 . $str2
+        echo $str1;          // Outputs: Hello World
+
+        
     ?>
 </body>
 </html>
