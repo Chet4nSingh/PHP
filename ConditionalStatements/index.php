@@ -19,12 +19,40 @@
 </head>
 <body>
     <?php
-        $score = 95;
-        if ($score >= 95) echo "<h1>Grade: A</h1>";
-        else if ($score >= 75) echo "<h1>Grade: B</h1>";
-        else if ($score >= 55) echo "<h1>Grade: C</h1>";
-        else if ($score >= 35) echo "<h1>Grade: D</h1>";
-        else echo "<h1>Grade: E</h1>";
-    ?>    
+        // if statement
+        $a = 10;
+        if ($a > 5) {
+            echo "$a is greater than 5";
+        }
+
+        // if-else statement
+        $b = 3;
+        if ($b > 5) {
+            echo "$b is greater than 5";
+        } else {
+            echo "$b is not greater than 5";
+        }
+
+        // if-elseif-else statement
+        $c = 8;
+        if ($c > 10) {
+            echo "$c is greater than 10";
+        } elseif ($c == 8) {
+            echo "$c is equal to 8";
+        } else {
+            echo "$c is less than 10";
+        }
+
+        // Nested if statements
+        $d = 15;
+        if ($d > 10) {
+            if ($d < 20) {
+                echo "$d is between 10 and 20";
+            } else {
+                echo "$d is greater than or equal to 20";
+            }
+        }
+    ?>
+    
 </body>
 </html>
