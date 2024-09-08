@@ -105,7 +105,18 @@
 
         // Constants in PHP
         define("SITE_NAME", "MyWebsite");
-        
+        define("PI", 3.14159);
+
+        echo SITE_NAME;  // Outputs: MyWebsite
+        echo PI;         // Outputs: 3.14159
+
+        // Constants with case-insensitive names (Deprecated in PHP 7.3+)
+        define("GREETING", "Hello!", true);
+        echo GREETING;  // Outputs: Hello!
+
+        // Constant arrays (PHP 7.0+)
+        define("COLORS", ["Red", "Green", "Blue"]);
+        echo COLORS[0];  // Outputs: Red        
     ?>
 
 
