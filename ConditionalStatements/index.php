@@ -68,6 +68,33 @@
             default:
                 echo "It's another day";
         }
+
+        // Ternary operator
+        $age = 18;
+        $status = ($age >= 18) ? "Adult" : "Minor";
+        echo $status;  // Outputs: Adult
+
+        // Null coalescing operator
+        $username = $_GET['user'] ?? 'Guest';  // If $_GET['user'] is not set, use 'Guest'
+        echo "Hello, $username";
+
+        // Short-circuiting with logical operators
+        $loggedIn = true;
+        $role = "admin";
+
+        if ($loggedIn && $role == "admin") {
+            echo "Welcome, Admin!";
+        }
+
+        // Match expression (PHP 8.0+)
+        $number = 2;
+        $result = match($number) {
+            1 => "One",
+            2 => "Two",
+            3 => "Three",
+            default => "Unknown number",
+        };
+        echo $result;  // Outputs: Two
     ?>
     
 </body>
