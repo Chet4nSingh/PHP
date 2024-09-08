@@ -70,13 +70,44 @@
             //* statements like if.
         ?>
     </p>
-    <form action="form_submit.php" method="POST">
+    <!-- <form action="form_submit.php" method="POST">
         <div>
             <label for="name">Name: </label>
             <input type="text" name="name">                     
         </div>
         <button>Submit</button>           
-    </form>
+    </form> -->
+
+    <?php
+        // Variables in PHP
+        $greeting = "Hello, World!";
+        $number = 42;
+        $is_logged_in = true;
+        $price = 19.99;
+
+        echo $greeting;  // Outputs: Hello, World!
+        echo $number;    // Outputs: 42
+        echo $is_logged_in;  // Outputs: 1 (true)
+        echo $price;     // Outputs: 19.99
+
+        // Variable types
+        $string = "This is a string";
+        $integer = 100;
+        $float = 10.5;
+        $boolean = false;
+        $array = array(1, 2, 3);
+        $nullVar = null;
+
+        // Variable variables
+        $varName = "example";
+        $$varName = "Variable variable";
+        echo $example;  // Outputs: Variable variable
+
+        // Constants in PHP
+        define("SITE_NAME", "MyWebsite");
+        
+    ?>
+
 
 </body>
 </html>
