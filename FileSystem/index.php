@@ -101,6 +101,16 @@
         // Moving a file
         rename('source.txt', 'new_directory/destination.txt');
 
+        // include() example
+        // Includes and evaluates the specified file. If the file is not found, a warning is emitted, but the script continues.
+
+        include('header.php');  // Assuming 'header.php' exists, it will be included here
+        echo "This is the main content of the page.";
+        include('footer.php');  // Assuming 'footer.php' exists, it will be included here
+
+        // If 'file_does_not_exist.php' does not exist, a warning will be issued, but the script will continue
+        include('file_does_not_exist.php');
+        echo "This will still be executed even if the include() fails.";
     ?>    
 </body>
 </html>
