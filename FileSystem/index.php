@@ -111,6 +111,24 @@
         // If 'file_does_not_exist.php' does not exist, a warning will be issued, but the script will continue
         include('file_does_not_exist.php');
         echo "This will still be executed even if the include() fails.";
+
+        // require() example
+        // Similar to include(), but if the file is not found, it emits a fatal error and stops the script execution.
+
+        require('header.php');  // If 'header.php' is not found, the script will stop
+        echo "This is the main content of the page.";
+        require('footer.php');  // If 'footer.php' is not found, the script will stop
+
+        // If 'file_does_not_exist.php' does not exist, the script will stop, and the following code will not be executed
+        require('file_does_not_exist.php');
+        echo "This will NOT be executed if the require() fails.";
+
+
+        // include_once() and require_once() examples
+        // Ensures the file is included or required only once, even if called multiple times
+
+        include_once('header.php');  // Will include the file only once
+        require_once('footer.php');  // Will require the file only once
     ?>    
 </body>
 </html>
