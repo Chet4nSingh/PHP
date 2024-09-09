@@ -116,7 +116,28 @@
 
         // Constant arrays (PHP 7.0+)
         define("COLORS", ["Red", "Green", "Blue"]);
-        echo COLORS[0];  // Outputs: Red        
+        echo COLORS[0];  // Outputs: Red
+
+        // Magic constants
+        echo __FILE__;  // Outputs: The full path of the file
+        echo __DIR__;   // Outputs: The directory of the file
+        echo __LINE__;  // Outputs: The current line number in the file
+
+        // Class constants
+        class MyClass {
+            const VERSION = 1.0;
+        }
+
+        echo MyClass::VERSION;  // Outputs: 1.0
+
+        // PHP 7.4+ Constant visibility in classes
+        class AnotherClass {
+            public const PUBLIC_CONST = "Public";
+            protected const PROTECTED_CONST = "Protected";
+            private const PRIVATE_CONST = "Private";
+        }
+
+        echo AnotherClass::PUBLIC_CONST;  // Outputs: Public
     ?>
 
 
