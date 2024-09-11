@@ -111,7 +111,7 @@
         echo PI;         // Outputs: 3.14159
 
         // Constants with case-insensitive names (Deprecated in PHP 7.3+)
-        define("GREETING", "Hello!", true);
+        define("GREETING", "Hello!");
         echo GREETING;  // Outputs: Hello!
 
         // Constant arrays (PHP 7.0+)
