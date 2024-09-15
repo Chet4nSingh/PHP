@@ -26,11 +26,17 @@
     </style>
 </head>
 <body>
-    <h1>Exercises</h1>
-    <ul>
-        <li><a href="getRemainder.php">Remainder</a></li>
-        <li><a href="getFactorial.php">Factorial</a></li>
-        <li><a href="rightTriangle.php">Right Angled Triangle</a></li>
-    </ul>
+    <?php 
+        function rightTriangle($row): void {
+            for ($i = 0; $i < $row; $i ++) {
+                for ($j = 0; $j < $i + 1; $j ++) {
+                    echo "* ";
+                }
+                echo "<br>";
+            }
+        }
+
+        rightTriangle(16);
+    ?>
 </body>
 </html>
