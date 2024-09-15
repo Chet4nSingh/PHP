@@ -26,10 +26,15 @@
     </style>
 </head>
 <body>
-    <h1>Exercises</h1>
-    <ul>
-        <li><a href="getRemainder.php">Remainder</a></li>
-        <li><a href="getFactorial.php">Factorial</a></li>
-    </ul>
+    <?php 
+        function getFactorial($n): int {
+            if ($n === 0 || $n === 1) return 1;
+            return $n * getFactorial($n - 1);
+        }
+
+        $n = 5;
+        $result = getFactorial($n);x: 
+        echo "5!: ".$result;
+    ?>
 </body>
 </html>

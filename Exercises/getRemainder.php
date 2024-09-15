@@ -27,13 +27,13 @@
 </head>
 <body>
     <?php 
-        function remainder($x, $y): int {
+        function getRemainder($x, $y): int {
             return $x % $y;
         }
 
         $x = -9;
         $y = 4;
-        $result = remainder($x, $y);
+        $result = getRemainder($x, $y);
         echo "Result: ".$result;
     ?>
 </body>
