@@ -10,8 +10,6 @@
             background-color: #000;
             color: green;
             display: grid;
-            /* grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr; */
             place-items: center;
             height: 100vh;
             margin: 0;
