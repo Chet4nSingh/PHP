@@ -12,5 +12,7 @@ This repository is created to store the PHP tutorial source code and other relat
 - Date And Time
 - Arrays
 - Functions
+- Forms
 - File System
 - INT220
+- Exercises

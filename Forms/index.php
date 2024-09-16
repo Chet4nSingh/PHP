@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
     <style>
+        :root {
+            --TEXT-COLOR: purple;
+        }
+
         body {
             font-family: monospace;
             background-color: #000;
-            color: green;
+            color: var(--TEXT-COLOR);
             display: grid;
             place-items: center;
             height: 100vh;
@@ -19,7 +23,7 @@
         div {
             width: 40%;
             padding: 2rem;
-            border: 1px dashed green;
+            border: 1px dashed var(--TEXT-COLOR);
         }
 
         input {
@@ -27,21 +31,29 @@
             font-size: 2rem;
             padding: 1rem;
             padding-left: 2rem;
-            background-color: transparent;
+            background-color: black;
             border: none;
             outline: none;
-            border-bottom: 1px solid green;
-            color: green;
+            border-bottom: 1px solid var(--TEXT-COLOR);
+            color: var(--TEXT-COLOR);
         }
 
         button {
             padding: 1rem;
             font-size: 2rem;
-            background-color: green;
+            background-color: var(--TEXT-COLOR);
             color: black;
             outline: none;
             border: none;
             font-family: inherit;
+            border: 1px solid var(--TEXT-COLOR);
+            transition: 75ms;
+        }
+
+        button:hover {
+            background-color: black;
+            color: var(--TEXT-COLOR);
+            border: 1px solid var(--TEXT-COLOR);
         }
 
         form {
@@ -55,8 +67,14 @@
     <div>
         <h2>Forms</h2>
         <form action="form_submit.php" method="POST">
-            <label for="name">Name: </label><br>
-            <input type="text" id="name" name="name" required>
+            <p>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required>
+            </p>
+            <p>
+                <label for="regno">Reg no.: </label>
+                <input type="text" id="regno" name="regno" required>
+            </p>
             <button>Submit</button>
         </form>
     </div>
