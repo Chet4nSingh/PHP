@@ -36,7 +36,7 @@
             }
         }
 
-        rightTriangle(16);
+        rightTriangle(8);
     ?>
 </body>
 </html>
